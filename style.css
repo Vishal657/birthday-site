@@ -1,0 +1,1123 @@
+/* =========================
+   PINK BIRTHDAY THEME
+========================= */
+
+:root {
+    --pink-light: #fff5f8;
+    --pink-soft: #ffe3ec;
+    --pink: #ffb6cd;
+    --pink-dark: #ec6c99;
+    --pink-deep: #c94f7d;
+    --white: #ffffff;
+    --text: #704653;
+    --text-light: #a27b88;
+    --border: #f6d5e0;
+    --shadow: 0 15px 45px rgba(201, 79, 125, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+body {
+    background: var(--pink-light);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+body.popup-open {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+::selection {
+    background: var(--pink);
+    color: #54283a;
+}
+
+/* =========================
+   FLOATING BACKGROUND HEARTS
+========================= */
+
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.floating-hearts span {
+    position: absolute;
+    bottom: -60px;
+    color: #f6a7c0;
+    opacity: 0.48;
+    font-size: 25px;
+    animation: floatUp linear infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+    left: 5%;
+    animation-duration: 13s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 15%;
+    animation-duration: 17s;
+    animation-delay: -5s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 25%;
+    animation-duration: 14s;
+    animation-delay: -8s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 37%;
+    animation-duration: 19s;
+    animation-delay: -2s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 47%;
+    animation-duration: 15s;
+    animation-delay: -9s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 58%;
+    animation-duration: 18s;
+    animation-delay: -4s;
+}
+
+.floating-hearts span:nth-child(7) {
+    left: 68%;
+    animation-duration: 14s;
+    animation-delay: -7s;
+}
+
+.floating-hearts span:nth-child(8) {
+    left: 78%;
+    animation-duration: 20s;
+    animation-delay: -3s;
+}
+
+.floating-hearts span:nth-child(9) {
+    left: 88%;
+    animation-duration: 16s;
+    animation-delay: -10s;
+}
+
+.floating-hearts span:nth-child(10) {
+    left: 95%;
+    animation-duration: 14s;
+    animation-delay: -6s;
+}
+
+.floating-hearts span:nth-child(11) {
+    left: 32%;
+    animation-duration: 18s;
+    animation-delay: -11s;
+}
+
+.floating-hearts span:nth-child(12) {
+    left: 72%;
+    animation-duration: 16s;
+    animation-delay: -12s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.45;
+    }
+
+    85% {
+        opacity: 0.35;
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 8%;
+}
+
+.logo {
+    font-family: "Pacifico", cursive;
+    font-size: 22px;
+    color: var(--pink-deep);
+}
+
+.nav-link {
+    font-size: 13px;
+    color: var(--text-light);
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--pink-deep);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    z-index: 1;
+    min-height: 670px;
+    padding: 60px 8% 110px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 45px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(255, 207, 225, 0.8),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 5% 80%,
+            rgba(255, 223, 235, 0.7),
+            transparent 35%
+        );
+}
+
+.hero-content {
+    animation: fadeUp 1s ease both;
+}
+
+.little-tag {
+    display: inline-block;
+    padding: 10px 17px;
+    margin-bottom: 32px;
+    border: 1px solid #f5cbd9;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--pink-deep);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.8;
+    color: var(--pink-deep);
+}
+
+.hero h1 {
+    margin: 22px 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 5.2vw, 72px);
+    line-height: 1.18;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+.pink-name,
+.section-heading h2 span,
+.letter-card h2 span,
+.surprise-content h2 span,
+.surprise-popup h2 span {
+    color: var(--pink-dark);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+}
+
+.pink-name {
+    display: block;
+}
+
+.hero-description {
+    max-width: 460px;
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+}
+
+.button-primary {
+    background: linear-gradient(
+        135deg,
+        #ffb4cb,
+        #f17ba5
+    );
+    color: white;
+    box-shadow: 0 10px 25px rgba(236, 108, 153, 0.25);
+}
+
+.button-primary:hover {
+    box-shadow: 0 15px 30px rgba(236, 108, 153, 0.35);
+}
+
+.button-secondary {
+    border: 1px solid #f2ccda;
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--pink-deep);
+}
+
+.hero-note {
+    margin-top: 28px;
+    font-family: "Playfair Display", serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text-light);
+}
+
+/* =========================
+   HERO PHOTO
+========================= */
+
+.hero-photo-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 460px;
+    animation: fadeUp 1s ease 0.2s both;
+}
+
+.hero-photo-frame {
+    position: relative;
+    width: min(330px, 100%);
+    padding: 13px 13px 24px;
+    background: white;
+    box-shadow: 0 20px 55px rgba(157, 77, 108, 0.16);
+    transform: rotate(4deg);
+    animation: gentleSway 5s ease-in-out infinite;
+}
+
+.hero-photo {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    background: var(--pink-soft);
+}
+
+.photo-caption {
+    padding-top: 18px;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-size: 17px;
+    color: var(--pink-deep);
+}
+
+.tape {
+    position: absolute;
+    top: -15px;
+    left: 38%;
+    width: 85px;
+    height: 28px;
+    background: rgba(255, 205, 223, 0.85);
+    transform: rotate(-8deg);
+    z-index: 2;
+}
+
+.sparkle {
+    position: absolute;
+    color: var(--pink-dark);
+    animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+.sparkle-one {
+    top: 40px;
+    left: 12%;
+    font-size: 45px;
+}
+
+.sparkle-two {
+    top: 80px;
+    right: 8%;
+    font-size: 35px;
+    animation-delay: 0.5s;
+}
+
+.sparkle-three {
+    bottom: 35px;
+    left: 10%;
+    font-size: 50px;
+    animation-delay: 1s;
+}
+
+.floating-note {
+    position: absolute;
+    padding: 12px 18px;
+    border: 1px solid #f9d7e2;
+    border-radius: 25px;
+    background: white;
+    color: var(--pink-deep);
+    font-family: "Pacifico", cursive;
+    font-size: 13px;
+    box-shadow: var(--shadow);
+    animation: gentleSway 4s ease-in-out infinite;
+}
+
+.note-one {
+    top: 18%;
+    right: 0;
+    transform: rotate(7deg);
+}
+
+.note-two {
+    bottom: 15%;
+    left: 0;
+    transform: rotate(-7deg);
+    animation-delay: 1s;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transform: translateX(-50%);
+    color: var(--text-light);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.scroll-arrow {
+    font-size: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+/* =========================
+   SHARED SECTION STYLING
+========================= */
+
+.love-section,
+.memories-section,
+.letter-section,
+.surprise-section {
+    position: relative;
+    z-index: 1;
+    padding: 100px 8%;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-heading h2,
+.letter-card h2,
+.surprise-content h2 {
+    margin: 20px 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.section-description {
+    max-width: 520px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* =========================
+   LOVE CARDS
+========================= */
+
+.love-section {
+    background: rgba(255, 255, 255, 0.58);
+}
+
+.love-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.love-card {
+    padding: 35px 25px;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    background: linear-gradient(
+        150deg,
+        #ffffff,
+        #fff6f9
+    );
+    text-align: center;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.love-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+}
+
+.card-icon {
+    margin-bottom: 17px;
+    font-size: 36px;
+    animation: gentleSway 4s ease-in-out infinite;
+}
+
+.love-card h3 {
+    margin-bottom: 12px;
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.love-card p {
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =========================
+   MEMORIES GALLERY
+========================= */
+
+.memories-section {
+    background:
+        radial-gradient(
+            circle at 10% 30%,
+            #ffe6ef,
+            transparent 35%
+        ),
+        var(--pink-light);
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1150px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.polaroid {
+    padding: 12px 12px 22px;
+    background: white;
+    box-shadow: 0 12px 35px rgba(157, 77, 108, 0.12);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.rotate-left {
+    transform: rotate(-3deg);
+}
+
+.rotate-right {
+    transform: rotate(3deg);
+}
+
+.polaroid:hover {
+    transform: translateY(-10px) rotate(0);
+    box-shadow: 0 20px 40px rgba(157, 77, 108, 0.2);
+    z-index: 2;
+}
+
+.polaroid-image {
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    background: var(--pink-soft);
+}
+
+.polaroid-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.polaroid:hover img {
+    transform: scale(1.06);
+}
+
+.polaroid figcaption {
+    padding-top: 17px;
+    font-family: "Pacifico", cursive;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--pink-deep);
+}
+
+.gallery-footer {
+    margin-top: 45px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--text-light);
+}
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.letter-section {
+    background: #fff0f5;
+}
+
+.letter-card {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    padding: 60px clamp(25px, 7vw, 75px);
+    border: 1px solid #f7d4e0;
+    border-radius: 8px;
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.94),
+            rgba(255, 255, 255, 0.94)
+        ),
+        repeating-linear-gradient(
+            transparent,
+            transparent 35px,
+            #f7dfe8 36px
+        );
+    box-shadow: 0 20px 55px rgba(201, 79, 125, 0.1);
+    text-align: center;
+}
+
+.letter-decoration {
+    margin-bottom: 20px;
+    color: var(--pink-dark);
+    font-size: 40px;
+}
+
+.letter-card h2 {
+    font-size: clamp(32px, 4vw, 43px);
+}
+
+.letter-divider {
+    margin: 28px 0;
+    color: var(--pink-dark);
+    letter-spacing: 5px;
+}
+
+.letter-greeting {
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    font-style: italic;
+    text-align: left;
+}
+
+.letter-text {
+    color: #886674;
+    font-size: 14px;
+    line-height: 2;
+    text-align: left;
+}
+
+.letter-signature {
+    margin-top: 35px;
+    font-family: "Pacifico", cursive;
+    font-size: 20px;
+    color: var(--pink-deep);
+}
+
+.letter-hearts {
+    margin-top: 25px;
+    font-size: 24px;
+}
+
+/* =========================
+   BIRTHDAY SURPRISE
+========================= */
+
+.surprise-section {
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #ffe2ed,
+            transparent 50%
+        ),
+        #fff8fb;
+}
+
+.surprise-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.birthday-cake {
+    display: inline-block;
+    margin-bottom: 25px;
+    font-size: 75px;
+    animation: cakeBounce 3s ease-in-out infinite;
+}
+
+.surprise-content > p:not(.eyebrow) {
+    max-width: 450px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.surprise-button {
+    margin-top: 30px;
+}
+
+/* =========================
+   SURPRISE POPUP
+========================= */
+
+.surprise-overlay[hidden] {
+    display: none !important;
+}
+
+.surprise-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+    background: rgba(91, 43, 62, 0.45);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.3s ease;
+}
+
+.surprise-popup {
+    position: relative;
+    width: min(500px, 100%);
+    max-height: calc(100vh - 40px);
+    padding: 45px 30px;
+    overflow-y: auto;
+    border: 1px solid white;
+    border-radius: 30px;
+    background: linear-gradient(
+        145deg,
+        #fff9fb,
+        #ffe3ed
+    );
+    box-shadow: 0 25px 80px rgba(91, 43, 62, 0.2);
+    text-align: center;
+    animation: popupIn 0.5s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: var(--pink-deep);
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.popup-bow {
+    margin-bottom: 15px;
+    font-size: 60px;
+}
+
+.surprise-popup h2 {
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.surprise-popup > p {
+    margin-bottom: 18px;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.popup-highlight {
+    color: var(--pink-deep) !important;
+}
+
+.popup-hearts {
+    margin: 25px 0;
+    font-size: 27px;
+}
+
+.celebration-heart {
+    position: fixed;
+    top: -50px;
+    z-index: 200;
+    pointer-events: none;
+    animation: heartRain linear forwards;
+}
+
+@keyframes heartRain {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate3d(var(--drift), 115vh, 0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    position: relative;
+    z-index: 1;
+    padding: 45px 20px;
+    border-top: 1px solid #f8dce6;
+    background: white;
+    text-align: center;
+}
+
+.footer-bow {
+    margin-bottom: 10px;
+    color: var(--pink-dark);
+    font-size: 36px;
+}
+
+.footer p {
+    color: var(--text-light);
+    font-size: 12px;
+    line-height: 2;
+}
+
+.footer-heart {
+    color: var(--pink-deep) !important;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popupIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes gentleSway {
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -8px;
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.45;
+        scale: 0.9;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1.15;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+@keyframes cakeBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(3deg);
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 50px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-photo-area {
+        min-height: 450px;
+    }
+
+    .hero-photo-frame {
+        width: 300px;
+    }
+
+    .hero-photo {
+        height: 340px;
+    }
+
+    .love-cards {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 650px;
+        gap: 30px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+    .navbar {
+        padding: 20px 6%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 45px 6% 100px;
+    }
+
+    .little-tag {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+    }
+
+    .hero-photo-area {
+        min-height: 400px;
+    }
+
+    .hero-photo-frame {
+        width: 260px;
+    }
+
+    .hero-photo {
+        height: 300px;
+    }
+
+    .note-one {
+        right: -5px;
+    }
+
+    .note-two {
+        left: -5px;
+    }
+
+    .love-section,
+    .memories-section,
+    .letter-section,
+    .surprise-section {
+        padding: 75px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2,
+    .letter-card h2,
+    .surprise-content h2 {
+        font-size: 32px;
+    }
+
+    .photo-gallery {
+        gap: 18px;
+    }
+
+    .polaroid {
+        padding: 8px 8px 15px;
+    }
+
+    .polaroid figcaption {
+        font-size: 10px;
+        padding-top: 12px;
+    }
+
+    .letter-card {
+        padding: 40px 22px;
+    }
+
+    .letter-text {
+        font-size: 13px;
+    }
+
+    .surprise-popup {
+        padding: 40px 23px;
+    }
+
+    .surprise-popup h2 {
+        font-size: 29px;
+    }
+}
+
+/* Respect visitors who prefer less animation */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
