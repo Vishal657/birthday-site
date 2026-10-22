@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -72,6 +73,10 @@
                 <a href="#memories" class="button button-secondary">
                     Meri Beautiful gudiya 📸
                 </a>
+
+                <button class="button button-secondary secret-button-alt" id="secretUnlockButton" type="button">
+                    Unlock secret gallery ✨
+                </button>
             </div>
 
             <div class="hero-note">
@@ -91,11 +96,7 @@
 
                 <div class="tape"></div>
 
-                <img
-                    src="photos/photo1.jpg"
-                    alt="A favourite picture of you"
-                    class="hero-photo"
-                >
+                <img src="photos/photo1.jpg" alt="A favourite picture of you" class="hero-photo">
 
                 <div class="photo-caption">
                     meri wiffy ♡
@@ -152,7 +153,8 @@
                 <h3>Your softness</h3>
                 <p>
                     I feel your softness in the gentlest ways — the calm in your voice,
-                    the kindness in your heart. Even in arguments, your sweet softness makes me fall in love with you all over again.
+                    the kindness in your heart. Even in arguments, your sweet softness makes me fall in love with you
+                    all over again.
                 </p>
             </article>
 
@@ -192,11 +194,7 @@
             <figure class="polaroid rotate-left">
 
                 <div class="polaroid-image">
-                    <img
-                        src="photos/photo2.jpg"
-                        alt="One of my favourite photos"
-                        loading="lazy"
-                    >
+                    <img src="photos/photo2.jpg" alt="One of my favourite photos" loading="lazy">
                 </div>
 
                 <figcaption>meri bachi 🌸</figcaption>
@@ -206,11 +204,7 @@
             <figure class="polaroid rotate-right">
 
                 <div class="polaroid-image">
-                    <img
-                        src="photos/photo3.jpg"
-                        alt="A special memory"
-                        loading="lazy"
-                    >
+                    <img src="photos/photo3.jpg" alt="A special memory" loading="lazy">
                 </div>
 
                 <figcaption>meri choti princess ♡</figcaption>
@@ -220,11 +214,7 @@
             <figure class="polaroid rotate-left">
 
                 <div class="polaroid-image">
-                    <img
-                        src="photos/photo4.jpg"
-                        alt="Another beautiful memory"
-                        loading="lazy"
-                    >
+                    <img src="photos/photo4.jpg" alt="Another beautiful memory" loading="lazy">
                 </div>
 
                 <figcaption>meri cutie pie 🎀</figcaption>
@@ -234,11 +224,7 @@
             <figure class="polaroid rotate-right">
 
                 <div class="polaroid-image">
-                    <img
-                        src="photos/photo5.jpg"
-                        alt="A moment worth remembering"
-                        loading="lazy"
-                    >
+                    <img src="photos/photo5.jpg" alt="A moment worth remembering" loading="lazy">
                 </div>
 
                 <figcaption>meri goo... goo... 💗</figcaption>
@@ -328,11 +314,7 @@
                 all the pink hearts in the universe.
             </p>
 
-            <button
-                class="button button-primary surprise-button"
-                id="surpriseButton"
-                type="button"
-            >
+            <button class="button button-primary surprise-button" id="surpriseButton" type="button">
                 Click for your surprise 💗
             </button>
 
@@ -340,24 +322,52 @@
 
     </section>
 
+    <div class="secret-gallery-popup" id="secretGallerySection" role="dialog" aria-modal="true"
+        aria-labelledby="secretGalleryTitle" hidden>
+        <div class="secret-gallery-panel">
+            <button class="close-button secret-close-button" id="closeSecretGallery" aria-label="Close pink memories"
+                type="button">
+                ×
+            </button>
+
+            <div class="secret-header">
+                <p class="eyebrow">A PRIVATE LITTLE UNIVERSE</p>
+                <h2 id="secretGalleryTitle">
+                    Our <span>beautiful memories</span>
+                </h2>
+             </div>
+
+             <div class="secret-gallery-grid">
+                <figure class="secret-card reveal-delay-1">
+                    <img src="photos/photo6.jpg" alt="Sweet memory" loading="lazy">
+                    <figcaption>my forever smile ♡</figcaption>
+                </figure>
+
+                <figure class="secret-card reveal-delay-2">
+                    <img src="photos/photo8.jpg" alt="Sweet memory two" loading="lazy">
+                    <figcaption>my favourite girl 🌷</figcaption>
+                </figure>
+
+                <figure class="secret-card reveal-delay-3">
+                    <img src="photos/photo7.jpg" alt="Sweet memory three" loading="lazy">
+                    <figcaption>cutie pie 💗</figcaption>
+                </figure>
+
+                <figure class="secret-card reveal-delay-4">
+                    <img src="photos/photo9.jpg" alt="Sweet memory four" loading="lazy">
+                    <figcaption>love of my life ✨</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
     <!-- Surprise Popup -->
-    <div
-        class="surprise-overlay"
-        id="surpriseOverlay"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="popupTitle"
-        hidden
-    >
+    <div class="surprise-overlay" id="surpriseOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle"
+        hidden>
 
         <div class="surprise-popup">
 
-            <button
-                class="close-button"
-                id="closePopup"
-                aria-label="Close surprise"
-                type="button"
-            >
+            <button class="close-button" id="closePopup" aria-label="Close surprise" type="button">
                 ×
             </button>
 
@@ -374,16 +384,13 @@
             </p>
 
             <p class="popup-highlight">
-                You are love of my life and therefore I made you a universe of your favorite color - a tiny pink universe. ♡
+                You are love of my life and therefore I made you a universe of your favorite color - a tiny pink
+                universe. ♡
             </p>
 
             <div class="popup-hearts">💗 💕 💗</div>
 
-            <button
-                class="button button-primary"
-                id="celebrateAgain"
-                type="button"
-            >
+            <button class="button button-primary" id="celebrateAgain" type="button">
                 Click me for one more surprise 😊 💖
             </button>
 
@@ -412,11 +419,70 @@
         const surpriseOverlay = document.getElementById("surpriseOverlay");
         const closePopup = document.getElementById("closePopup");
         const celebrateAgain = document.getElementById("celebrateAgain");
+        const secretUnlockButton = document.getElementById("secretUnlockButton");
+        const secretGallerySection = document.getElementById("secretGallerySection");
+        const closeSecretGallery = document.getElementById("closeSecretGallery");
+
+        let passwordFromEnv = "";
+
+        function parsePasswordFromText(text) {
+            if (!text) {
+                return "";
+            }
+
+            const match = text.match(/(?:^|\n)\s*(?:PASSWORD|SECRET|BIRTHDAY_PASSWORD)\s*[:=]\s*["']?([^#\n\r]+?)["']?\s*(?:#.*)?$/im);
+
+            if (match && match[1]) {
+                return match[1].trim();
+            }
+
+            return "";
+        }
+
+        async function loadPasswordFromEnv() {
+            const inlinePassword = (
+                (window.BIRTHDAY_PASSWORD && String(window.BIRTHDAY_PASSWORD).trim()) ||
+                (window.PASSWORD && String(window.PASSWORD).trim()) ||
+                ""
+            );
+
+            if (inlinePassword) {
+                passwordFromEnv = inlinePassword;
+                return;
+            }
+
+            const candidatePaths = ["./.env", "/.env", "./.env.local", "/.env.local"];
+
+            for (const candidatePath of candidatePaths) {
+                try {
+                    const response = await fetch(candidatePath, { cache: "no-store" });
+
+                    if (!response.ok) {
+                        continue;
+                    }
+
+                    const text = await response.text();
+                    const parsedPassword = parsePasswordFromText(text);
+
+                    if (parsedPassword) {
+                        passwordFromEnv = parsedPassword;
+                        return;
+                    }
+                } catch (error) {
+                    console.warn(`Could not load password from ${candidatePath}:`, error);
+                }
+            }
+
+            if (location.protocol === "file:") {
+                console.warn("Password was not loaded because this page is being opened as a file. Serve the site with a local server or set window.BIRTHDAY_PASSWORD.");
+            }
+        }
 
         function showSurprise() {
             surpriseOverlay.hidden = false;
             document.body.classList.add("popup-open");
-
+            launchButterflies();
+            launchHearts();
             closePopup.focus();
         }
 
@@ -426,54 +492,150 @@
             surpriseButton.focus();
         }
 
-        surpriseButton.addEventListener("click", showSurprise);
+        function showSecretGallery() {
+            secretGallerySection.hidden = false;
+            document.body.classList.add("popup-open");
+            launchHearts();
+            launchButterflies();
+            closeSecretGallery.focus();
+        }
 
-        closePopup.addEventListener("click", hideSurprise);
-
-        celebrateAgain.addEventListener("click", launchHearts);
-
-        surpriseOverlay.addEventListener("click", function (event) {
-            if (event.target === surpriseOverlay) {
-                hideSurprise();
+        function hideSecretGallery() {
+            secretGallerySection.hidden = true;
+            document.body.classList.remove("popup-open");
+            if (secretUnlockButton) {
+                secretUnlockButton.focus();
             }
-        });
+        }
 
-        document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape" && !surpriseOverlay.hidden) {
-                hideSurprise();
+        function unlockSecretGallery() {
+            const correctPassword = (passwordFromEnv && passwordFromEnv.trim()) || "Ojasvi@2026";
+            const enteredPassword = window.prompt("Enter the password to unlock your secret gallery 💗");
+
+            if (enteredPassword === null) {
+                return;
             }
-        });
 
-        function launchHearts() {
-            const symbols = ["💗", "💕", "💖", "♡", "🎀", "✨"];
+            if (enteredPassword.trim() === correctPassword) {
+                showSecretGallery();
+                secretGallerySection.scrollIntoView({ behavior: "smooth", block: "start" });
+                return;
+            }
+
+            window.alert("Oops! That's not the right password. Try again 💕");
+        }
+
+        function launchFlowers() {
+            const flowers = ["🌼", "🌸", "💮", "🌷", "🌺", "🪷"];
 
             for (let i = 0; i < 32; i++) {
-                const heart = document.createElement("span");
+                const flower = document.createElement("span");
 
-                heart.className = "celebration-heart";
-                heart.textContent =
-                    symbols[Math.floor(Math.random() * symbols.length)];
+                flower.className = "celebration-heart";
+                flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
 
-                heart.style.left = Math.random() * 100 + "vw";
-                heart.style.setProperty(
-                    "--drift",
-                    (Math.random() * 180 - 90) + "px"
-                );
+                flower.style.left = Math.random() * 100 + "vw";
+                flower.style.setProperty("--drift", (Math.random() * 180 - 90) + "px");
+                flower.style.animationDuration = (2.5 + Math.random() * 2) + "s";
+                flower.style.fontSize = (18 + Math.random() * 24) + "px";
 
-                heart.style.animationDuration =
-                    (2.5 + Math.random() * 2) + "s";
+                document.body.appendChild(flower);
 
-                heart.style.fontSize =
-                    (16 + Math.random() * 22) + "px";
-
-                document.body.appendChild(heart);
-
-                heart.addEventListener("animationend", function () {
-                    heart.remove();
+                flower.addEventListener("animationend", function () {
+                    flower.remove();
                 });
             }
         }
+
+        function launchButterflies() {
+            const butterflies = ["🦋", "✨", "💫"];
+
+            for (let i = 0; i < 16; i++) {
+                const butterfly = document.createElement("span");
+                butterfly.className = "butterfly";
+                butterfly.textContent = butterflies[Math.floor(Math.random() * butterflies.length)];
+
+                const startX = Math.random() * window.innerWidth;
+                const startY = -40 - Math.random() * 100;
+                const endX = startX + (Math.random() * 200 - 100);
+                const endY = window.innerHeight + 120 + Math.random() * 220;
+
+                butterfly.style.left = startX + "px";
+                butterfly.style.top = startY + "px";
+                butterfly.style.setProperty("--swayX", (Math.random() * 200 - 100) + "px");
+                butterfly.style.setProperty("--fallY", (window.innerHeight + 220) + "px");
+                butterfly.style.setProperty("--flyX", (Math.random() * 150 - 75) + "px");
+                butterfly.style.setProperty("--flyY", (30 + Math.random() * 140) + "px");
+                butterfly.style.setProperty("--endX", endX + "px");
+                butterfly.style.setProperty("--endY", endY + "px");
+                butterfly.style.animationDuration = (3.5 + Math.random() * 3.5) + "s";
+                butterfly.style.fontSize = (16 + Math.random() * 28) + "px";
+
+                document.body.appendChild(butterfly);
+
+                butterfly.addEventListener("animationend", function () {
+                    butterfly.remove();
+                });
+            }
+        }
+
+        function launchHearts() {
+            launchFlowers();
+        }
+
+        loadPasswordFromEnv();
+
+        if (surpriseButton) {
+            surpriseButton.addEventListener("click", showSurprise);
+        }
+
+        if (secretUnlockButton) {
+            secretUnlockButton.addEventListener("click", unlockSecretGallery);
+        }
+
+        if (closeSecretGallery) {
+            closeSecretGallery.addEventListener("click", hideSecretGallery);
+        }
+
+        if (closePopup) {
+            closePopup.addEventListener("click", hideSurprise);
+        }
+
+        if (celebrateAgain) {
+            celebrateAgain.addEventListener("click", function () {
+                launchFlowers();
+                launchButterflies();
+            });
+        }
+
+        if (surpriseOverlay) {
+            surpriseOverlay.addEventListener("click", function (event) {
+                if (event.target === surpriseOverlay) {
+                    hideSurprise();
+                }
+            });
+        }
+
+        if (secretGallerySection) {
+            secretGallerySection.addEventListener("click", function (event) {
+                if (event.target === secretGallerySection) {
+                    hideSecretGallery();
+                }
+            });
+        }
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                if (surpriseOverlay && !surpriseOverlay.hidden) {
+                    hideSurprise();
+                }
+                if (secretGallerySection && !secretGallerySection.hidden) {
+                    hideSecretGallery();
+                }
+            }
+        });
     </script>
 
 </body>
+
 </html>
